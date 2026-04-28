@@ -1,147 +1,235 @@
  <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>FlavourBurst Curd</title>
-  <style>
-    * {
-      margin: 0;
-      padding: 0;
-      box-sizing: border-box;
-      font-family: Arial, sans-serif;
-    }
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlavourBurst Curd</title>
 
-    body {
-      background: #fffaf5;
-      color: #333;
-    }
+<style>
+body {
+  margin: 0;
+  font-family: 'Segoe UI', sans-serif;
+  background: #fffaf5;
+}
 
-    header {
-      background: #ff6b6b;
-      color: white;
-      padding: 20px;
-      text-align: center;
-    }
+/* HEADER */
+header {
+  background: linear-gradient(90deg, #ff6b6b, #ff9f43);
+  color: white;
+  text-align: center;
+  padding: 40px 20px;
+}
+header h1 {
+  font-size: 3rem;
+  margin: 0;
+}
+header p {
+  font-size: 1.2rem;
+}
 
-    header h1 {
-      font-size: 2.5rem;
-    }
+/* BANNER */
+.banner {
+  background: #ffe066;
+  text-align: center;
+  padding: 15px;
+  font-size: 1.3rem;
+  font-weight: bold;
+}
 
-    .banner {
-      background: #ffe066;
-      text-align: center;
-      padding: 15px;
-      font-weight: bold;
-      font-size: 1.2rem;
-    }
+/* SECTION */
+.section {
+  padding: 40px 20px;
+}
 
-    .container {
-      padding: 30px;
-    }
+.section h2 {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 30px;
+}
 
-    .section-title {
-      text-align: center;
-      margin-bottom: 20px;
-      font-size: 2rem;
-      color: #ff6b6b;
-    }
+/* GRID */
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 25px;
+}
 
-    .flavors {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
+/* CARD */
+.card {
+  border-radius: 15px;
+  overflow: hidden;
+  box-shadow: 0 6px 15px rgba(0,0,0,0.15);
+  transition: 0.3s;
+}
+.card:hover {
+  transform: scale(1.05);
+}
 
-    .card {
-      background: white;
-      padding: 20px;
-      border-radius: 10px;
-      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
-      text-align: center;
-      transition: transform 0.2s;
-    }
+/* IMAGE */
+.card img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
 
-    .card:hover {
-      transform: scale(1.05);
-    }
+/* CONTENT */
+.card-content {
+  padding: 20px;
+  text-align: center;
+}
+.card-content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+}
+.card-content p {
+  font-size: 1rem;
+}
 
-    .card h3 {
-      color: #ff6b6b;
-      margin-bottom: 10px;
-    }
+/* COLORS FOR EACH FLAVOR */
+.strawberry { background: #ffe5ec; color: #c9184a; }
+.mango { background: #fff3cd; color: #e67e22; }
+.blueberry { background: #e0ecff; color: #3b5bdb; }
+.vanilla { background: #f8f1e7; color: #8d6e63; }
+.chocolate { background: #ede0d4; color: #5d4037; }
+.caramel { background: #fff0e0; color: #bf6c00; }
+.choila { background: #ffe3e3; color: #c1121f; }
+.momo { background: #e6fff4; color: #2b9348; }
 
-    .discount {
-      color: green;
-      font-weight: bold;
-    }
+.discount {
+  color: green;
+  font-weight: bold;
+  margin-top: 10px;
+}
 
-    footer {
-      text-align: center;
-      padding: 20px;
-      background: #333;
-      color: white;
-      margin-top: 30px;
-    }
+/* CONTACT */
+.contact {
+  background: #333;
+  color: white;
+  padding: 40px 20px;
+  text-align: center;
+}
+.contact h2 {
+  font-size: 2rem;
+}
+.contact p {
+  margin: 10px 0;
+}
 
-    .btn {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 15px;
-      background: #ff6b6b;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-    }
+/* FOOTER */
+footer {
+  background: #111;
+  color: #aaa;
+  text-align: center;
+  padding: 15px;
+}
+</style>
 
-    .btn:hover {
-      background: #ff4d4d;
-    }
-  </style>
 </head>
+
 <body>
 
 <header>
   <h1>FlavourBurst Curd</h1>
-  <p>Natural & Creative Flavoured Yogurt Experience</p>
+  <p>Experience Natural Freshness & Creative Taste</p>
 </header>
 
 <div class="banner">
-  🎉 New Year 2083 Offer: 20% OFF on Half of Our Products! 🎉
+  🎉 New Year 2083 Offer: 20% OFF on Selected Flavours 🎉
 </div>
 
-<div class="container">
-  <h2 class="section-title">Our Flavours</h2>
+<section class="section">
+  <h2>Our Premium Flavours</h2>
 
-  <div class="flavors">
+  <div class="grid">
 
-    <!-- Natural Flavours -->
-    <div class="card"><h3>Strawberry</h3><p>Fresh & sweet natural flavor</p></div>
-    <div class="card"><h3>Mango</h3><p>Rich tropical taste</p></div>
-    <div class="card"><h3>Banana</h3><p>Creamy and smooth</p></div>
-    <div class="card"><h3>Blueberry</h3><p>Sweet & tangy delight</p></div>
-    <div class="card"><h3>Honey</h3><p>Pure natural sweetness</p></div>
-    <div class="card"><h3>Vanilla</h3><p>Classic smooth flavor</p></div>
+    <!-- STRAWBERRY -->
+    <div class="card strawberry">
+      <img src="https://images.unsplash.com/photo-1571212515416-fef01fc43637" alt="Strawberry Curd">
+      <div class="card-content">
+        <h3>Strawberry</h3>
+        <p>Fresh, juicy, and naturally sweet curd.</p>
+      </div>
+    </div>
 
-    <!-- Artificial / Creative Flavours -->
-    <div class="card"><h3>Chocolate</h3><p>Rich and indulgent</p><p class="discount">20% OFF</p></div>
-    <div class="card"><h3>Caramel</h3><p>Sweet buttery taste</p><p class="discount">20% OFF</p></div>
-    <div class="card"><h3>Bubblegum</h3><p>Fun and colorful</p></div>
-    <div class="card"><h3>Cola</h3><p>Unique fizzy-inspired taste</p><p class="discount">20% OFF</p></div>
+    <!-- MANGO -->
+    <div class="card mango">
+      <img src="https://images.unsplash.com/photo-1553279768-865429fa0078" alt="Mango Curd">
+      <div class="card-content">
+        <h3>Mango</h3>
+        <p>Tropical richness blended into creamy yogurt.</p>
+        <p class="discount">20% OFF</p>
+      </div>
+    </div>
 
-    <!-- Local Special Flavours -->
-    <div class="card"><h3>Choila Flavour</h3><p>Spicy & smoky Nepali twist</p><p class="discount">20% OFF</p></div>
-    <div class="card"><h3>Momo Flavour</h3><p>Inspired by your favorite dumplings</p><p class="discount">20% OFF</p></div>
+    <!-- BLUEBERRY -->
+    <div class="card blueberry">
+      <img src="https://images.unsplash.com/photo-1502741338009-cac2772e18bc" alt="Blueberry Curd">
+      <div class="card-content">
+        <h3>Blueberry</h3>
+        <p>Sweet and tangy burst of antioxidants.</p>
+      </div>
+    </div>
+
+    <!-- VANILLA -->
+    <div class="card vanilla">
+      <img src="https://images.unsplash.com/photo-1589712235274-1e7f6d6c8c62" alt="Vanilla Curd">
+      <div class="card-content">
+        <h3>Vanilla</h3>
+        <p>Classic smooth and aromatic delight.</p>
+      </div>
+    </div>
+
+    <!-- CHOCOLATE -->
+    <div class="card chocolate">
+      <img src="https://images.unsplash.com/photo-1606313564200-e75d5e30476c" alt="Chocolate Curd">
+      <div class="card-content">
+        <h3>Chocolate</h3>
+        <p>Rich, indulgent cocoa flavor.</p>
+        <p class="discount">20% OFF</p>
+      </div>
+    </div>
+
+    <!-- CARAMEL -->
+    <div class="card caramel">
+      <img src="https://images.unsplash.com/photo-1587248720327-8eb72564be1e" alt="Caramel Curd">
+      <div class="card-content">
+        <h3>Caramel</h3>
+        <p>Buttery sweetness with smooth texture.</p>
+      </div>
+    </div>
+
+    <!-- CHOILA -->
+    <div class="card choila">
+      <img src="https://images.unsplash.com/photo-1604908176997-431c2c6d1f4a" alt="Choila Curd">
+      <div class="card-content">
+        <h3>Choila Flavour</h3>
+        <p>Spicy, smoky Nepali-inspired curd experience.</p>
+        <p class="discount">20% OFF</p>
+      </div>
+    </div>
+
+    <!-- MOMO -->
+    <div class="card momo">
+      <img src="https://images.unsplash.com/photo-1601050690597-df0568f70950" alt="Momo Curd">
+      <div class="card-content">
+        <h3>Momo Flavour</h3>
+        <p>A bold twist inspired by your favorite dumplings.</p>
+        <p class="discount">20% OFF</p>
+      </div>
+    </div>
 
   </div>
+</section>
 
-  <div style="text-align:center; margin-top:30px;">
-    <a href="#" class="btn">Order Now</a>
-  </div>
-</div>
+<section class="contact">
+  <h2>Contact Us</h2>
+  <p>Email: info@flavourburstcurd.com</p>
+  <p>Phone: +977-9800000000</p>
+  <p>Post Box: 12345, Kathmandu, Nepal</p>
+</section>
 
 <footer>
-  <p>&copy; 2083 FlavourBurst Curd Company | स्वाद र स्वास्थ्यको संगम</p>
+  <p>&copy; 2083 FlavourBurst Curd Company | Freshness in Every Spoon</p>
 </footer>
 
 </body>
