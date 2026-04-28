@@ -1,1 +1,148 @@
-<h1> flavoured dahi's like banana, strawberry, grapes </h1>
+ <!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlavourBurst Curd</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: #fffaf5;
+      color: #333;
+    }
+
+    header {
+      background: #ff6b6b;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 2.5rem;
+    }
+
+    .banner {
+      background: #ffe066;
+      text-align: center;
+      padding: 15px;
+      font-weight: bold;
+      font-size: 1.2rem;
+    }
+
+    .container {
+      padding: 30px;
+    }
+
+    .section-title {
+      text-align: center;
+      margin-bottom: 20px;
+      font-size: 2rem;
+      color: #ff6b6b;
+    }
+
+    .flavors {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+
+    .card {
+      background: white;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+      text-align: center;
+      transition: transform 0.2s;
+    }
+
+    .card:hover {
+      transform: scale(1.05);
+    }
+
+    .card h3 {
+      color: #ff6b6b;
+      margin-bottom: 10px;
+    }
+
+    .discount {
+      color: green;
+      font-weight: bold;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+      background: #333;
+      color: white;
+      margin-top: 30px;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 15px;
+      background: #ff6b6b;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    .btn:hover {
+      background: #ff4d4d;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>FlavourBurst Curd</h1>
+  <p>Natural & Creative Flavoured Yogurt Experience</p>
+</header>
+
+<div class="banner">
+  🎉 New Year 2083 Offer: 20% OFF on Half of Our Products! 🎉
+</div>
+
+<div class="container">
+  <h2 class="section-title">Our Flavours</h2>
+
+  <div class="flavors">
+
+    <!-- Natural Flavours -->
+    <div class="card"><h3>Strawberry</h3><p>Fresh & sweet natural flavor</p></div>
+    <div class="card"><h3>Mango</h3><p>Rich tropical taste</p></div>
+    <div class="card"><h3>Banana</h3><p>Creamy and smooth</p></div>
+    <div class="card"><h3>Blueberry</h3><p>Sweet & tangy delight</p></div>
+    <div class="card"><h3>Honey</h3><p>Pure natural sweetness</p></div>
+    <div class="card"><h3>Vanilla</h3><p>Classic smooth flavor</p></div>
+
+    <!-- Artificial / Creative Flavours -->
+    <div class="card"><h3>Chocolate</h3><p>Rich and indulgent</p><p class="discount">20% OFF</p></div>
+    <div class="card"><h3>Caramel</h3><p>Sweet buttery taste</p><p class="discount">20% OFF</p></div>
+    <div class="card"><h3>Bubblegum</h3><p>Fun and colorful</p></div>
+    <div class="card"><h3>Cola</h3><p>Unique fizzy-inspired taste</p><p class="discount">20% OFF</p></div>
+
+    <!-- Local Special Flavours -->
+    <div class="card"><h3>Choila Flavour</h3><p>Spicy & smoky Nepali twist</p><p class="discount">20% OFF</p></div>
+    <div class="card"><h3>Momo Flavour</h3><p>Inspired by your favorite dumplings</p><p class="discount">20% OFF</p></div>
+
+  </div>
+
+  <div style="text-align:center; margin-top:30px;">
+    <a href="#" class="btn">Order Now</a>
+  </div>
+</div>
+
+<footer>
+  <p>&copy; 2083 FlavourBurst Curd Company | स्वाद र स्वास्थ्यको संगम</p>
+</footer>
+
+</body>
+</html>
